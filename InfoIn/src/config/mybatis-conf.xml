@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="defaultStatementTimeout" value="25000"/>
+	</settings>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED"> 
+                <property name="driver" value="com.mysql.jdbc.Driver"/> 
+                <property name="url" value="jdbc:mysql://192.168.2.251:3306/cafs5"/> 
+                <property name="username" value="root"/> 
+                <property name="password" value="123456"/> 
+            </dataSource>
+		</environment>
+	</environments>
+	
+	<!-- ORM映射文件 -->
+	<mappers>
+		<mapper resource="cn/joymates/infoin/domain/basic.xml" />
+	</mappers>
+	
+	
+</configuration> 

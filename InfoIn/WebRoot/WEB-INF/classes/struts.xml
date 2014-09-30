@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.mapper.alwaysSelectFullNamespace" value="true" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.action.extension" value="html"/>
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<package name="verify" extends="struts-default" namespace="/">
+		<action name="xlsUpload" class="cn.joymates.infoin.action.XlsFileUploadAction" method="upload">
+			<result>/index.jsp</result>
+			<param name="uploadDir">/uploadFiles</param>
+			
+			<param name="school">学校</param>
+			<param name="grade">年级</param>
+			<param name="classes">班级</param>
+			<param name="teacher">教师</param>
+			<param name="term">学期</param>
+		</action>
+	
+	</package>
+</struts>
