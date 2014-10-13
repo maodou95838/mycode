@@ -26,7 +26,7 @@ public class XlsFileUploadAction extends ActionSupport {
 
 	public String upload() {
 		String toPath = ServletActionContext.getServletContext().getRealPath(uploadDir);
-		File toDir = new File(toPath);
+		File toDir = new File(toPath);////test synch
 		if (!toDir.exists()) {
 			toDir.mkdirs();
 		}
